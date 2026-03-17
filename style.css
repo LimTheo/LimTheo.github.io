@@ -1,0 +1,40 @@
+body { 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* 글래스모피즘 컨테이너 */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* 벤토 그리드 카드 호버 효과 강화 */
+.bento-card {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.2);
+}
+
+/* 스크롤 애니메이션 (등장 효과) */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+body.modal-open { overflow: hidden; }

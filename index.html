@@ -5,30 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>임성수 (Lim Theo) | Portfolio</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Devicon -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     
-    <!-- Pretendard Font -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <link rel="stylesheet" href="style.css" />
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Pretendard', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Pretendard', 'sans-serif'] },
                     colors: {
                         background: '#f8fafc',
                         surface: '#ffffff',
-                        primary: '#0284c7', // sky-600
-                        'primary-dark': '#0369a1', // sky-700
+                        primary: '#0284c7', 
+                        'primary-dark': '#0369a1',
                     },
                     boxShadow: {
                         'glass': '0 8px 32px 0 rgba(2, 132, 199, 0.05)',
@@ -38,59 +34,14 @@
             }
         }
     </script>
-    <style>
-        body { 
-            -webkit-font-smoothing: antialiased; 
-            -moz-osx-font-smoothing: grayscale;
-            background-color: #f8fafc;
-            overflow-x: hidden;
-        }
-
-        /* 글래스모피즘 컨테이너 */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        /* 벤토 그리드 카드 호버 효과 강화 */
-        .bento-card {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .bento-card:hover {
-            transform: translateY(-6px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.2);
-        }
-
-        /* 스크롤 애니메이션 (등장 효과) */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-
-        body.modal-open { overflow: hidden; }
-    </style>
 </head>
 <body class="text-slate-800 font-sans leading-relaxed tracking-tight selection:bg-sky-200">
 
-    <!-- Ambient Blur Background & Parallax Scroll Elements (고퀄리티 반응형 바다 배경) -->
     <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-gradient-to-b from-slate-50 to-sky-50">
-        <!-- Blur Orbs -->
         <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-sky-300/30 rounded-full blur-[120px]"></div>
         <div class="absolute top-[20%] right-[-10%] w-[40%] h-[60%] bg-cyan-300/20 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-[-10%] left-[20%] w-[60%] h-[50%] bg-blue-400/20 rounded-full blur-[120px]"></div>
 
-        <!-- 글래스 느낌의 물방울들 -->
         <div class="parallax-float absolute top-[50%] left-[15%] opacity-70" data-speed-x="0.05" data-speed-y="-0.5">
             <div class="w-12 h-12 rounded-full border border-white/40 bg-gradient-to-tr from-white/10 to-white/30 shadow-[inset_0_0_15px_rgba(255,255,255,0.6)] backdrop-blur-sm"></div>
         </div>
@@ -101,24 +52,19 @@
             <div class="w-8 h-8 rounded-full border border-white/40 bg-gradient-to-tr from-white/10 to-white/30 shadow-[inset_0_0_12px_rgba(255,255,255,0.6)] backdrop-blur-sm"></div>
         </div>
 
-        <!-- 3중 레이어 파도 (스크롤 시 좌우로 움직이는 Parallax Waves) -->
         <div class="absolute bottom-0 left-0 w-[200%] h-[30vh] min-h-[250px] pointer-events-none opacity-[0.85] flex items-end">
-            <!-- 맨 뒤 파도 (느림) -->
             <div class="parallax-wave absolute bottom-0 w-full" data-speed="0.15">
                 <svg viewBox="0 0 1440 320" class="w-full h-full fill-sky-200/50 drop-shadow-lg" preserveAspectRatio="none"><path d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,165.3C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             </div>
-            <!-- 중간 파도 -->
             <div class="parallax-wave absolute bottom-0 w-full opacity-70" data-speed="0.3">
                 <svg viewBox="0 0 1440 320" class="w-full h-full fill-cyan-200/60 drop-shadow-lg" preserveAspectRatio="none"><path d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             </div>
-            <!-- 맨 앞 파도 (빠름) -->
             <div class="parallax-wave absolute bottom-0 w-full opacity-90" data-speed="0.5">
                 <svg viewBox="0 0 1440 320" class="w-full h-full fill-blue-200/70 drop-shadow-xl" preserveAspectRatio="none"><path d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,149.3C672,160,768,224,864,229.3C960,235,1056,181,1152,149.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             </div>
         </div>
     </div>
 
-    <!-- Floating 알약 네비게이션 -->
     <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all">
         <div class="glass-panel px-6 py-3 rounded-full shadow-glass flex items-center gap-6 md:gap-10">
             <a href="#" class="text-base font-extrabold tracking-tighter text-primary">Theo.</a>
@@ -136,13 +82,9 @@
 
     <main class="pt-32 pb-24 space-y-32 max-w-6xl mx-auto px-6 relative z-10">
         
-        <!-- 1. Hero Section -->
         <section id="hero" class="min-h-[70vh] flex flex-col justify-center items-center text-center reveal">
-            
-            <!-- 프로필 이미지 -->
             <div class="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 group">
                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-400 to-cyan-300 rounded-full blur-md opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"></div>
-                <!-- ★ [이미지 교체] 아래 src 주소를 본인의 증명사진이나 프로필 사진 경로로 변경하세요 -->
                 <div class="relative w-full h-full rounded-full border-4 border-white shadow-xl overflow-hidden bg-slate-100 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=300&h=300" alt="임성수 프로필" class="w-full h-full object-cover">
                 </div>
@@ -178,7 +120,6 @@
             </div>
         </section>
 
-        <!-- 2. Bento Grid -->
         <section id="bento" class="scroll-mt-32">
             <div class="mb-10 reveal">
                 <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">핵심 성과 위젯</h2>
@@ -186,9 +127,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 auto-rows-[240px]">
-                
-                <!-- 위젯 1: 특허 & 대상 -->
-                <div class="bento-card reveal md:col-span-2 md:row-span-2 glass-panel rounded-[2rem] p-8 md:p-10 flex flex-col relative overflow-hidden group border border-white cursor-pointer" onclick="openModal('modal-project-1')">
+                <div class="bento-card reveal md:col-span-2 md:row-span-2 glass-panel rounded-[2rem] p-8 md:p-10 flex flex-col relative overflow-hidden group border border-white cursor-pointer" onclick="window.openModal('modal-project-1')">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-400/10 opacity-50 group-hover:opacity-100 transition-opacity"></div>
                     <div class="relative z-10 flex flex-col h-full">
                         <div class="flex gap-2 mb-6">
@@ -208,8 +147,7 @@
                     <i data-lucide="cpu" class="absolute -bottom-10 -right-10 w-48 h-48 text-blue-500/5 group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></i>
                 </div>
 
-                <!-- 위젯 2: 공모전 우수상 -->
-                <div class="bento-card reveal delay-100 md:col-span-2 glass-panel rounded-[2rem] p-8 flex flex-col relative overflow-hidden border border-white cursor-pointer group" onclick="openModal('modal-project-2')">
+                <div class="bento-card reveal delay-100 md:col-span-2 glass-panel rounded-[2rem] p-8 flex flex-col relative overflow-hidden border border-white cursor-pointer group" onclick="window.openModal('modal-project-2')">
                     <div class="flex justify-between items-start mb-4 relative z-10">
                         <span class="bg-slate-800 text-white text-xs font-extrabold px-3 py-1.5 rounded-full">우수상 (부산항만공사 사장상)</span>
                         <i data-lucide="ship" class="text-slate-300 w-8 h-8 group-hover:text-cyan-500 group-hover:scale-110 transition-all duration-300"></i>
@@ -225,25 +163,21 @@
                     </div>
                 </div>
 
-                <!-- 위젯 3: Tech Stack -->
                 <div class="bento-card reveal delay-200 md:col-span-1 glass-panel rounded-[2rem] p-6 flex flex-col border border-white justify-center group">
                     <h4 class="text-sm font-extrabold text-slate-400 uppercase tracking-wider mb-4 text-center group-hover:text-slate-600 transition-colors">Tech Stack</h4>
                     <div class="grid grid-cols-3 gap-y-4 gap-x-2 justify-items-center">
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300"><i class="devicon-python-plain text-3xl"></i><span class="text-[10px] font-bold text-slate-500">Python</span></div>
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300 delay-75"><i class="devicon-java-plain text-3xl text-red-500"></i><span class="text-[10px] font-bold text-slate-500">Java</span></div>
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300 delay-100"><i class="devicon-csharp-plain text-3xl text-purple-600"></i><span class="text-[10px] font-bold text-slate-500">C#</span></div>
-                        
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300 delay-100"><i class="devicon-javascript-plain text-3xl text-yellow-400"></i><span class="text-[10px] font-bold text-slate-500">JS</span></div>
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300 delay-150"><i class="devicon-react-original text-3xl text-cyan-400"></i><span class="text-[10px] font-bold text-slate-500">React</span></div>
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300 delay-200"><i class="devicon-spring-original text-3xl text-green-500"></i><span class="text-[10px] font-bold text-slate-500">Spring</span></div>
-                        
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300 delay-200"><i class="devicon-mysql-plain text-3xl text-blue-500"></i><span class="text-[10px] font-bold text-slate-500">MySQL</span></div>
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300 delay-250"><i class="devicon-git-plain text-3xl text-orange-500"></i><span class="text-[10px] font-bold text-slate-500">Git</span></div>
                         <div class="flex flex-col items-center gap-1 group-hover:scale-110 transition-transform duration-300 delay-300"><i class="devicon-raspberrypi-plain text-3xl text-red-600"></i><span class="text-[10px] font-bold text-slate-500">Raspberry</span></div>
                     </div>
                 </div>
 
-                <!-- 위젯 4: IT 기획 역량 -->
                 <div class="bento-card reveal delay-300 md:col-span-1 bg-gradient-to-br from-slate-800 to-slate-900 rounded-[2rem] p-8 flex flex-col border border-slate-700 text-white group">
                     <i data-lucide="lightbulb" class="text-yellow-400 w-8 h-8 mb-4 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300"></i>
                     <h3 class="text-lg font-extrabold tracking-tight mb-2 group-hover:text-cyan-300 transition-colors">실무 IT 기획력 (DX)</h3>
@@ -251,11 +185,9 @@
                         IT 솔루션 기업에서 8개월간 실무를 보조하며 현장의 니즈를 분석하고, 비개발 직군과 소통하는 브릿지 역할을 수행했습니다.
                     </p>
                 </div>
-
             </div>
         </section>
 
-        <!-- 3. Experience -->
         <section id="experience" class="scroll-mt-32">
             <div class="mb-12 reveal">
                 <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">궤적</h2>
@@ -264,8 +196,6 @@
             
             <div class="glass-panel rounded-[2rem] p-8 md:p-12 border border-white reveal hover:shadow-lg transition-shadow duration-500">
                 <div class="border-l-2 border-slate-200 ml-3 space-y-12 pl-10 relative">
-                    
-                    <!-- 1. 해양대 & 웹 풀스택 -->
                     <div class="relative reveal group">
                         <span class="absolute -left-[53px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-blue-500 ring-4 ring-white shadow-sm group-hover:scale-125 transition-transform duration-300"></span>
                         <div class="space-y-3">
@@ -273,61 +203,51 @@
                             <h3 class="font-extrabold text-xl text-slate-900">한국해양대학교 편입 및 웹 풀스택 개발자 과정 수료</h3>
                             <p class="text-slate-600 font-medium leading-relaxed">
                                 편입 후 전공에 몰입함과 동시에 <strong>프로그래머스 웹 풀스택 개발자 과정</strong>을 온라인으로 이수하며 개발 역량을 극대화했습니다. 
-                                전공 동아리 '개미'를 창설(부회장)해 학과 내 최고 아웃풋(대상, 특허)을 견인했으며, 현재 부산시 DATAORY LAB 사업 해커톤 기획을 총괄 중입니다.
+                                전공 동아리 '개미'를 창설(부회장)해 학과 내 최고 아웃풋을 견인했으며, 현재 부산시 DATAORY LAB 사업 해커톤 기획을 총괄 중입니다.
                             </p>
                         </div>
                     </div>
-
-                    <!-- 2. 사람과기술 실무 -->
                     <div class="relative reveal delay-100 group">
                         <span class="absolute -left-[53px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-slate-400 ring-4 ring-white shadow-sm group-hover:scale-125 transition-transform duration-300"></span>
                         <div class="space-y-3">
                             <div class="inline-block bg-slate-100 text-slate-600 text-xs font-extrabold px-3 py-1 rounded-full">편입 전 (8개월)</div>
                             <h3 class="font-extrabold text-xl text-slate-900">사람과기술 - IT 기획 파트 실무</h3>
                             <p class="text-slate-600 font-medium leading-relaxed">
-                                IT 서비스 기획을 보조하며 산단 제조업의 디지털 전환(DX) 필요성을 체감했습니다. 현장과 개발팀의 소통을 돕는 통역사 역할을 수행하며 IT 비즈니스에 대한 깊은 이해를 얻었습니다.
+                                IT 서비스 기획을 보조하며 산단 제조업의 디지털 전환(DX) 필요성을 체감했습니다. 현장과 개발팀의 소통을 돕는 통역사 역할을 수행했습니다.
                             </p>
                         </div>
                     </div>
-
-                    <!-- 3. IoT 부트캠프 -->
                     <div class="relative reveal delay-200 group">
                         <span class="absolute -left-[53px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-400 ring-4 ring-white shadow-sm group-hover:scale-125 transition-transform duration-300"></span>
                         <div class="space-y-3">
                             <div class="inline-block bg-cyan-100 text-cyan-700 text-xs font-extrabold px-3 py-1 rounded-full">커리어 전환기</div>
                             <h3 class="font-extrabold text-xl text-slate-900">부경대 주관 IoT 부트캠프 수료</h3>
                             <p class="text-slate-600 font-medium leading-relaxed">
-                                기술을 향한 갈증으로 시작한 개발 입문 과정입니다. 비전공자로서 맨땅에 헤딩하듯 프로그래밍 기초와 하드웨어 제어 원리를 밤낮없이 학습하며 IT 인재로의 첫걸음을 뗐습니다.
+                                비전공자로서 맨땅에 헤딩하듯 프로그래밍 기초와 하드웨어 제어 원리를 밤낮없이 학습하며 IT 인재로의 첫걸음을 뗐습니다.
                             </p>
                         </div>
                     </div>
-
-                    <!-- 4. 과거 현장 경험 -->
                     <div class="relative reveal delay-300 group">
                         <span class="absolute -left-[53px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 ring-4 ring-white shadow-sm group-hover:scale-125 transition-transform duration-300"></span>
                         <div class="space-y-3">
                             <div class="inline-block bg-slate-100 text-slate-500 text-xs font-extrabold px-3 py-1 rounded-full">과거</div>
                             <h3 class="font-extrabold text-xl text-slate-900">현장 중심의 실무 경험 배양</h3>
                             <p class="text-slate-500 font-medium leading-relaxed">
-                                국제 요리대회 대상 수상 및 해군 조리병 만기 전역. 밑바닥부터 부딪혀 결과를 내는 끈기와 성실함, 고객의 니즈를 파악하는 치열한 서비스 마인드를 길렀습니다.
+                                국제 요리대회 대상 수상 및 해군 조리병 만기 전역. 밑바닥부터 부딪혀 결과를 내는 끈기와 성실함, 서비스 마인드를 길렀습니다.
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- 4. Projects -->
         <section id="projects" class="scroll-mt-32">
             <div class="mb-12 reveal">
                 <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">프로젝트 갤러리</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <!-- 프로젝트 1 -->
-                <div class="reveal bento-card cursor-pointer rounded-[2rem] bg-white border border-slate-100 shadow-sm overflow-hidden flex flex-col group" onclick="openModal('modal-project-1')">
+                <div class="reveal bento-card cursor-pointer rounded-[2rem] bg-white border border-slate-100 shadow-sm overflow-hidden flex flex-col group" onclick="window.openModal('modal-project-1')">
                     <div class="h-60 bg-slate-50 flex items-center justify-center relative overflow-hidden p-6">
                         <div class="absolute inset-0 bg-gradient-to-tr from-sky-100 to-transparent opacity-50 group-hover:scale-110 transition-transform duration-700"></div>
                         <div class="w-full h-full bg-white rounded-xl shadow-glass border border-slate-100 flex items-center justify-center relative z-10 group-hover:scale-105 group-hover:shadow-lg transition-all duration-500">
@@ -341,14 +261,13 @@
                         <h3 class="font-extrabold text-xl mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">지게차 운용 안전 예측 시스템</h3>
                         <p class="text-sm font-medium text-slate-500 mb-6 line-clamp-2">컴퓨팅 자원이 제한적인 환경(라즈베리파이)에서 객체 인식을 구현한 산업안전 솔루션</p>
                         <div class="mt-auto flex items-center gap-2">
-                            <span class="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-md flex items-center gap-1 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors"><i class="devicon-python-plain"></i> Python</span>
-                            <span class="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-md flex items-center gap-1 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors"><i class="devicon-git-plain"></i> Git Total Mgr</span>
+                            <span class="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-md flex items-center gap-1"><i class="devicon-python-plain"></i> Python</span>
+                            <span class="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-md flex items-center gap-1"><i class="devicon-git-plain"></i> Git Mgr</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 프로젝트 2 -->
-                <div class="reveal delay-100 bento-card cursor-pointer rounded-[2rem] bg-white border border-slate-100 shadow-sm overflow-hidden flex flex-col group" onclick="openModal('modal-project-2')">
+                <div class="reveal delay-100 bento-card cursor-pointer rounded-[2rem] bg-white border border-slate-100 shadow-sm overflow-hidden flex flex-col group" onclick="window.openModal('modal-project-2')">
                     <div class="h-60 bg-slate-50 flex items-center justify-center relative overflow-hidden p-6">
                         <div class="absolute inset-0 bg-gradient-to-tl from-cyan-100 to-transparent opacity-50 group-hover:scale-110 transition-transform duration-700"></div>
                         <div class="w-full h-full bg-slate-900 rounded-xl shadow-glass border border-slate-800 flex items-center justify-center relative z-10 group-hover:scale-105 group-hover:shadow-2xl transition-all duration-500">
@@ -362,16 +281,14 @@
                         <h3 class="font-extrabold text-xl mb-3 text-slate-900 group-hover:text-cyan-600 transition-colors">항만 통선 디지털 중개 플랫폼</h3>
                         <p class="text-sm font-medium text-slate-500 mb-6 line-clamp-2">전화/수기 방식의 업무를 조건부 AI 추천 알고리즘을 통해 자동화한 디지털 전환 플랫폼</p>
                         <div class="mt-auto flex items-center gap-2">
-                            <span class="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-md flex items-center gap-1 group-hover:bg-cyan-50 group-hover:text-cyan-700 transition-colors"><i data-lucide="pen-tool" class="w-3 h-3"></i> DX 기획</span>
-                            <span class="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-md flex items-center gap-1 group-hover:bg-cyan-50 group-hover:text-cyan-700 transition-colors"><i data-lucide="sparkles" class="w-3 h-3"></i> AI 모델링</span>
+                            <span class="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-md flex items-center gap-1"><i data-lucide="pen-tool" class="w-3 h-3"></i> DX 기획</span>
+                            <span class="bg-slate-100 text-slate-600 text-[11px] font-bold px-3 py-1.5 rounded-md flex items-center gap-1"><i data-lucide="sparkles" class="w-3 h-3"></i> AI 모델링</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- 5. Contact -->
         <section id="contact" class="reveal">
             <div class="bg-slate-900 rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl group">
                 <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[80px] group-hover:bg-blue-400/30 transition-colors duration-700"></div>
@@ -401,17 +318,13 @@
         <p>© 2026 Lim Theo. Styled with Trendy UI.</p>
     </footer>
 
-    <!-- ==============================================
-         MODALS 
-    =============================================== -->
-    <div id="modal-backdrop" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300" onclick="closeAllModals()"></div>
+    <div id="modal-backdrop" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300" onclick="window.closeAllModals()"></div>
 
-    <!-- 모달 1 -->
     <div id="modal-project-1" class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-2xl hidden opacity-0 transition-all duration-300 scale-95 px-4">
         <div class="bg-white/90 backdrop-blur-xl rounded-[2rem] border border-white shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
             <div class="flex items-center justify-between px-8 py-6 border-b border-slate-100">
                 <h3 class="font-extrabold text-lg text-slate-800 flex items-center gap-2"><i data-lucide="folder-search" class="w-5 h-5 text-blue-500"></i> 프로젝트 상세</h3>
-                <button onclick="closeAllModals()" class="rounded-full bg-slate-100 p-2 hover:bg-slate-200 hover:rotate-90 text-slate-600 transition-all duration-300">
+                <button onclick="window.closeAllModals()" class="rounded-full bg-slate-100 p-2 hover:bg-slate-200 hover:rotate-90 text-slate-600 transition-all duration-300">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
@@ -419,7 +332,6 @@
                 <div class="mb-6">
                     <span class="inline-block bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full mb-3">대상 & 특허 출원</span>
                     <h2 class="text-3xl font-extrabold tracking-tight mb-2 text-slate-900">지게차 운용 안전 예측 시스템</h2>
-                    <p class="font-medium text-slate-500">2025 하반기 캡스톤디자인 경진대회 대상작</p>
                 </div>
                 
                 <div class="space-y-6 text-[15px] leading-loose text-slate-700 font-medium">
@@ -427,161 +339,64 @@
                         <strong class="text-slate-900 block mb-2"><i data-lucide="target" class="w-4 h-4 inline mb-1 text-blue-500"></i> 배경</strong>
                         물류 및 산업 현장에서 발생하는 지게차 중대재해를 고가의 센서 없이 경제적으로 예방하기 위해 시작된 프로젝트입니다.
                     </div>
-                    
                     <div>
                         <strong class="text-slate-900 text-lg block mb-3">나의 역할 및 기여</strong>
                         <ul class="space-y-3 pl-2">
                             <li class="flex items-start gap-2">
                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
-                                <span><strong>모델 경량화:</strong> 컴퓨팅 자원이 제한적인 라즈베리파이 환경에 맞춰 YOLOE 모델을 적용하여 실시간 객체 탐지 구현.</span>
+                                <span><strong>모델 경량화:</strong> 라즈베리파이 환경에 맞춰 YOLOE 모델을 적용하여 실시간 객체 탐지 구현.</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
-                                <span><strong>데이터 수치화:</strong> 화물 기울어짐 등 잠재 위험 요인 파악을 위해 영상 데이터를 수치화하여 다른 파트로 넘기는 파이프라인 설계.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
-                                <span><strong>협업 총괄 (Git):</strong> 비전 오도메트리 등 다양한 알고리즘 코드를 통합(Merge)하기 위해 Git 레포지토리를 직접 관리하며 충돌 방지 및 리딩.</span>
+                                <span><strong>협업 총괄 (Git):</strong> 코드를 통합하기 위해 Git 레포지토리를 관리하며 충돌 방지 및 리딩.</span>
                             </li>
                         </ul>
-                    </div>
-                    
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 text-blue-900">
-                        <strong class="block mb-1">결과</strong>
-                        소규모 현장에서도 즉시 도입 가능한 실효성을 인정받아 대상 수상 및 핵심 발명자로서 <strong>특허 출원 완료.</strong>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 모달 2 -->
     <div id="modal-project-2" class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-2xl hidden opacity-0 transition-all duration-300 scale-95 px-4">
         <div class="bg-white/90 backdrop-blur-xl rounded-[2rem] border border-white shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
             <div class="flex items-center justify-between px-8 py-6 border-b border-slate-100">
                 <h3 class="font-extrabold text-lg text-slate-800 flex items-center gap-2"><i data-lucide="folder-search" class="w-5 h-5 text-cyan-500"></i> 프로젝트 상세</h3>
-                <button onclick="closeAllModals()" class="rounded-full bg-slate-100 p-2 hover:bg-slate-200 hover:rotate-90 text-slate-600 transition-all duration-300">
+                <button onclick="window.closeAllModals()" class="rounded-full bg-slate-100 p-2 hover:bg-slate-200 hover:rotate-90 text-slate-600 transition-all duration-300">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
             <div class="p-8 overflow-y-auto">
                 <div class="mb-6">
-                    <span class="inline-block bg-slate-800 text-white text-xs font-extrabold px-3 py-1 rounded-full mb-3">부산항만공사 사장상 (우수상)</span>
+                    <span class="inline-block bg-slate-800 text-white text-xs font-extrabold px-3 py-1 rounded-full mb-3">우수상</span>
                     <h2 class="text-3xl font-extrabold tracking-tight mb-2 text-slate-900">항만 통선 디지털 중개 플랫폼</h2>
-                    <p class="font-medium text-slate-500">제12회 해양수산 비즈니스 공공서비스 공모전</p>
                 </div>
                 
                 <div class="space-y-6 text-[15px] leading-loose text-slate-700 font-medium">
                     <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
                         <strong class="text-slate-900 block mb-2"><i data-lucide="target" class="w-4 h-4 inline mb-1 text-cyan-500"></i> 배경</strong>
-                        기존 선박과 육지를 오가는 통선 배정 업무가 수기와 전화로만 이루어져 발생하는 아날로그적 비효율을 짚어내고 기획한 솔루션입니다.
+                        통선 배정 업무가 수기로만 이루어져 발생하는 비효율을 짚어내고 기획한 솔루션입니다.
                     </div>
-                    
                     <div>
                         <strong class="text-slate-900 text-lg block mb-3">핵심 기획 내용</strong>
                         <ul class="space-y-3 pl-2">
                             <li class="flex items-start gap-2">
                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-500 shrink-0 mt-0.5"></i>
-                                <span><strong>디지털 전환(DX) 설계:</strong> 전화 예약을 모바일 플랫폼으로 전환하여 실시간 매칭 및 투명한 거래 환경 구축.</span>
+                                <span><strong>디지털 전환(DX) 설계:</strong> 모바일 플랫폼으로 전환하여 실시간 매칭 환경 구축.</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-500 shrink-0 mt-0.5"></i>
-                                <span><strong>AI 추천 알고리즘:</strong> 거리, 통선 크기, 기상 악화 여부 등의 조건을 분석하여 최적의 배를 추천하는 조건부 모델링 제안.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-cyan-500 shrink-0 mt-0.5"></i>
-                                <span><strong>UX 개선:</strong> 다국적 선원들이 이용하는 항만 특성을 고려하여 실시간 다국어 번역 UI/UX 적용.</span>
+                                <span><strong>AI 추천 알고리즘:</strong> 최적의 배를 추천하는 조건부 모델링 제안.</span>
                             </li>
                         </ul>
-                    </div>
-                    
-                    <div class="bg-cyan-50 p-6 rounded-2xl border border-cyan-100 text-cyan-900">
-                        <strong class="block mb-1">결과</strong>
-                        물리적 현상의 문제점을 완벽하게 디지털 시스템으로 치환(DX)했다는 평가를 받으며 우수상 수상.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        lucide.createIcons();
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
+    <script src="modal.js"></script>
 
-        // 1. 부드러운 스크롤 애니메이션 (등장 효과)
-        const revealOptions = {
-            root: null,
-            rootMargin: '0px 0px -80px 0px',
-            threshold: 0.1
-        };
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, revealOptions);
-
-        document.querySelectorAll('.reveal').forEach((el) => {
-            revealObserver.observe(el);
-        });
-
-        // 2. 패럴랙스 (스크롤 반응형 배경 움직임)
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            
-            // 파도 좌우 출렁임
-            document.querySelectorAll('.parallax-wave').forEach(el => {
-                const speed = el.getAttribute('data-speed');
-                el.style.transform = `translateX(-${scrolled * speed}px)`;
-            });
-
-            // 글래스 물방울 대각선 이동
-            document.querySelectorAll('.parallax-float').forEach(el => {
-                const speedX = el.getAttribute('data-speed-x');
-                const speedY = el.getAttribute('data-speed-y');
-                el.style.transform = `translate(${scrolled * speedX}px, ${scrolled * speedY}px)`;
-            });
-        });
-
-        // 3. 모달 제어
-        const backdrop = document.getElementById('modal-backdrop');
-        const modals = document.querySelectorAll('[id^="modal-project-"]');
-
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (!modal) return;
-            
-            document.body.classList.add('modal-open');
-            
-            backdrop.classList.remove('hidden');
-            setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
-
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0', 'scale-95');
-                modal.classList.add('opacity-100', 'scale-100');
-            }, 10);
-        }
-
-        function closeAllModals() {
-            document.body.classList.remove('modal-open');
-            backdrop.classList.add('opacity-0');
-            
-            modals.forEach(modal => {
-                modal.classList.remove('opacity-100', 'scale-100');
-                modal.classList.add('opacity-0', 'scale-95');
-            });
-
-            setTimeout(() => {
-                backdrop.classList.add('hidden');
-                modals.forEach(modal => modal.classList.add('hidden'));
-            }, 300);
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeAllModals();
-        });
-    </script>
 </body>
 </html>
