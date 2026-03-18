@@ -330,35 +330,69 @@
     <div id="modal-backdrop" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-md hidden opacity-0 transition-opacity duration-300" onclick="window.closeAllModals()"></div>
 
     <!-- 모달 1 -->
-    <div id="modal-project-1" class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-2xl hidden opacity-0 transition-all duration-300 scale-95 px-4">
+<div id="modal-project-1" class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-3xl hidden opacity-0 transition-all duration-300 scale-95 px-4">
         <div class="bg-white/90 backdrop-blur-xl rounded-[2rem] border border-white shadow-2xl overflow-hidden flex flex-col max-h-[85vh]">
-            <div class="flex items-center justify-between px-8 py-6 border-b border-slate-100">
-                <h3 class="font-extrabold text-lg text-sky-900 flex items-center gap-2"><i data-lucide="folder-search" class="w-5 h-5 text-blue-500"></i> 프로젝트 상세</h3>
+            
+            <div class="flex items-center justify-between px-8 py-6 border-b border-slate-100 shrink-0">
+                <h3 class="font-extrabold text-lg text-sky-900 flex items-center gap-2">
+                    <i data-lucide="folder-search" class="w-5 h-5 text-blue-500"></i> 프로젝트 상세
+                </h3>
                 <button onclick="window.closeAllModals()" class="rounded-full bg-slate-100 p-2 hover:bg-slate-200 hover:rotate-90 text-slate-600 transition-all duration-300">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
             </div>
+            
             <div class="p-8 overflow-y-auto">
-                <div class="mb-6">
-                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full mb-3 tracking-tight">대상 & 특허 출원</span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2 text-sky-950 break-keep">지게차 운용 안전 예측 시스템</h2>
+                <div class="mb-8 text-center md:text-left">
+                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-extrabold px-4 py-1.5 rounded-full mb-4 shadow-sm tracking-tight">
+                        🏆 2025 캡스톤디자인 경진대회 대상 & 특허 출원
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2 text-sky-950 break-keep">지게차 운용 잠재 위험 사전 예측 및 경고 시스템</h2>
+                    <p class="font-medium text-slate-500 tracking-tight break-keep">고가의 센서를 대체하는 경제적인 단일 카메라 기반 비전(Vision) 솔루션</p>
                 </div>
                 
-                <div class="space-y-6 text-[15px] leading-loose text-slate-700 font-medium tracking-tight break-keep">
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                        <strong class="text-sky-950 block mb-2"><i data-lucide="target" class="w-4 h-4 inline mb-1 text-blue-500"></i> 배경</strong>
-                        물류 및 산업 현장에서 발생하는 지게차 중대재해를 고가의 센서 없이 경제적으로 예방하기 위해 시작된 프로젝트입니다.
+<div class="mb-8 group relative w-full aspect-video md:aspect-[16/9] bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col items-center justify-center cursor-pointer" onclick="window.open('images/project-1/Safety_Solution.pdf', '_blank')">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-sky-900 opacity-90 transition-opacity group-hover:opacity-100"></div>
+                    
+                    <div class="relative z-10 flex flex-col items-center transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <i data-lucide="file-text" class="w-16 h-16 text-sky-400 mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"></i>
+                        <h4 class="text-white font-extrabold text-xl md:text-2xl tracking-tight mb-2">Safety Solution 발표 자료</h4>
+                        <p class="text-sky-200/70 text-sm font-medium">클릭하여 PDF 원본 보기 (새 창)</p>
                     </div>
+                </div>
+                
+                <div class="space-y-8 text-[15px] leading-loose text-slate-700 font-medium tracking-tight break-keep">
+                    
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl"></div>
+                        <strong class="text-sky-950 block mb-2 text-lg"><i data-lucide="target" class="w-5 h-5 inline mb-1 text-blue-500"></i> 문제 인식 및 목적</strong>
+                        지게차는 물류 현장의 핵심 장비이나 충돌, 화물 낙하 등 중대재해의 주요 원인입니다. 특히 소규모 사업장의 경우 고가 안전 센서(LiDAR 등) 도입에 부담이 큽니다. 이에 <strong>최소한의 센서와 단일 카메라만으로 위험을 감지하는 경제적이고 안정적인 시스템</strong>을 기획했습니다.
+                    </div>
+                    
                     <div>
-                        <strong class="text-sky-950 text-lg block mb-3">나의 역할 및 기여</strong>
-                        <ul class="space-y-3 pl-2">
-                            <li class="flex items-start gap-2">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
-                                <span><strong>모델 경량화:</strong> 라즈베리파이 환경에 맞춰 YOLOE 모델을 적용하여 실시간 객체 탐지 구현.</span>
+                        <strong class="text-sky-950 text-lg block mb-4 border-b pb-2">나의 핵심 역할 및 기여도</strong>
+                        <ul class="space-y-5 pl-1">
+                            <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                                <i data-lucide="scan-line" class="w-6 h-6 text-blue-500 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-sky-900 block">실시간 충돌 감지 및 거리 측정 (Collision Detection)</strong>
+                                    단일 카메라를 기반으로 작업자와 지게차 간의 실시간 거리를 측정하는 로직을 개발했습니다. 객체의 자세 변화 및 하반신 가려짐 상황 등 다양한 변수에도 대응하여 측정 오차를 최소화했습니다.
+                                </div>
                             </li>
-                            <li class="flex items-start gap-2">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
-                                <span><strong>협업 총괄 (Git):</strong> 코드를 통합하기 위해 Git 레포지토리를 관리하며 충돌 방지 및 리딩.</span>
+                            <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                                <i data-lucide="cpu" class="w-6 h-6 text-blue-500 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-sky-900 block">비전 모델 경량화 (YOLOE)</strong>
+                                    컴퓨팅 자원이 극히 제한적인 라즈베리파이 환경에서도 객체 탐지가 실시간으로 작동할 수 있도록 YOLOE 모델을 최적화 및 경량화하여 적용했습니다.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                                <i data-lucide="git-merge" class="w-6 h-6 text-blue-500 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-sky-900 block">Git 협업 총괄 및 코드 아키텍처 리딩 (4인 팀)</strong>
+                                    화물 기울임 감지(Tilting), 비전 오도메트리 기반 위치 추정(VO) 등 각 팀원들의 개별 코드를 메인 시스템으로 완벽히 통합(Merge)하기 위해 Git 레포지토리를 전담 관리하고 충돌(Conflict)을 방지했습니다.
+                                </div>
                             </li>
                         </ul>
                     </div>
